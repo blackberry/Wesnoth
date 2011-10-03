@@ -1308,7 +1308,7 @@ namespace {
 	const SDL_Color chat_message_bg     = {0,0,0,140};
 }
 
-void game_display::add_chat_message(const time_t& time, const std::string& speaker,
+void game_display::add_chat_message(const std::time_t& time, const std::string& speaker,
 		int side, const std::string& message, events::chat_handler::MESSAGE_TYPE type,
 		bool bell)
 {

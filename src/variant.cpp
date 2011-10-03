@@ -10,6 +10,11 @@
 #include "formula_callable.hpp"
 #include "formula_function.hpp"
 
+#ifdef __PLAYBOOK__
+using ::std::pow;
+using ::std::abs;
+#endif
+
 namespace {
 std::string variant_type_to_string(variant::TYPE type) {
 	switch(type) {

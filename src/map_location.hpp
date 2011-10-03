@@ -114,7 +114,7 @@ void get_adjacent_tiles(const map_location& a, map_location* res);
  * (i.e. the minimum number of hexes that have to be traversed
  * to get from one hex to the other).
  */
-size_t distance_between(const map_location& a, const map_location& b);
+std::size_t distance_between(const map_location& a, const map_location& b);
 
 /** Parses ranges of locations into a vector of locations. */
 std::vector<map_location> parse_location_range(const std::string& xvals,

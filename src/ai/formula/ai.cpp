@@ -102,7 +102,7 @@ void formula_ai::handle_exception(game_logic::formula_error& e, const std::strin
 
 void formula_ai::display_message(const std::string& msg) const
 {
-	resources::screen->add_chat_message(time(NULL), "fai", get_side(), msg,
+	resources::screen->add_chat_message(std::time(NULL), "fai", get_side(), msg,
 				events::chat_handler::MESSAGE_PUBLIC, false);
 
 }

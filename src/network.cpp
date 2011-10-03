@@ -924,7 +924,11 @@ struct bandwidth_stats {
 		return *this;
 	}
 };
+#ifdef __PLAYBOOK__
+typedef std::map<std::string, bandwidth_stats> bandwidth_map;
+#else
 typedef std::map<const std::string, bandwidth_stats> bandwidth_map;
+#endif
 typedef std::vector<bandwidth_map> hour_stats_vector;
 hour_stats_vector hour_stats(24);
 

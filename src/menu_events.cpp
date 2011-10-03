@@ -1843,7 +1843,7 @@ void menu_handler::do_speak(){
 }
 
 
-void menu_handler::add_chat_message(const time_t& time,
+void menu_handler::add_chat_message(const std::time_t& time,
 		const std::string& speaker, int side, const std::string& message,
 		events::chat_handler::MESSAGE_TYPE type)
 {
@@ -2293,7 +2293,7 @@ class chat_command_handler : public map_command_handler<chat_command_handler>
 
 		void print(const std::string& title, const std::string& message)
 		{
-			chat_handler_.add_chat_message(time(NULL), title, 0, message);
+			chat_handler_.add_chat_message(std::time(NULL), title, 0, message);
 		}
 		void init_map()
 		{
@@ -2496,7 +2496,7 @@ class console_handler : public map_command_handler<console_handler>, private cha
 		}
 		void print(const std::string& title, const std::string& message)
 		{
-			menu_handler_.add_chat_message(time(NULL), title, 0, message);
+			menu_handler_.add_chat_message(std::time(NULL), title, 0, message);
 		}
 		void init_map()
 		{
@@ -2646,7 +2646,7 @@ void chat_handler::change_logging(const std::string& data) {
 		const std::string& msg =
 				vgettext("Unknown debug level: '$level'.", symbols);
 		ERR_NG << msg << "\n";
-		add_chat_message(time(NULL), _("error"), 0, msg);
+		add_chat_message(std::time(NULL), _("error"), 0, msg);
 		return;
 	}
 	if (!lg::set_log_domain_severity(domain, severity)) {
@@ -2655,7 +2655,7 @@ void chat_handler::change_logging(const std::string& data) {
 		const std::string& msg =
 				vgettext("Unknown debug domain: '$domain'.", symbols);
 		ERR_NG << msg << "\n";
-		add_chat_message(time(NULL), _("error"), 0, msg);
+		add_chat_message(std::time(NULL), _("error"), 0, msg);
 		return;
 	} else {
 		utils::string_map symbols;
@@ -2664,7 +2664,7 @@ void chat_handler::change_logging(const std::string& data) {
 		const std::string& msg =
 				vgettext("Switched domain: '$domain' to level: '$level'.", symbols);
 		LOG_NG << msg << "\n";
-		add_chat_message(time(NULL), "log", 0, msg);
+		add_chat_message(std::time(NULL), "log", 0, msg);
 	}
 }
 
@@ -2733,14 +2733,14 @@ void chat_handler::add_whisper_sent(const std::string& receiver, const std::stri
 {
 	utils::string_map symbols;
 	symbols["receiver"] = receiver;
-	add_chat_message(time(NULL), VGETTEXT("whisper to $receiver", symbols), 0, message);
+	add_chat_message(std::time(NULL), VGETTEXT("whisper to $receiver", symbols), 0, message);
 }
 
 void chat_handler::add_whisper_received(const std::string& sender, const std::string& message)
 {
 	utils::string_map symbols;
 	symbols["sender"] = sender;
-	add_chat_message(time(NULL), VGETTEXT("whisper: $sender", symbols), 0, message);
+	add_chat_message(std::time(NULL), VGETTEXT("whisper: $sender", symbols), 0, message);
 }
 
 void chat_handler::send_chat_room_message(const std::string& room,
@@ -2762,7 +2762,7 @@ void chat_handler::add_chat_room_message_sent(const std::string &room, const std
 void chat_handler::add_chat_room_message_received(const std::string &room,
 	const std::string &speaker, const std::string &message)
 {
-	add_chat_message(time(NULL), room + ": " + speaker, 0, message, events::chat_handler::MESSAGE_PRIVATE);
+	add_chat_message(std::time(NULL), room + ": " + speaker, 0, message, events::chat_handler::MESSAGE_PRIVATE);
 }
 
 
@@ -3003,7 +3003,7 @@ void menu_handler::send_chat_message(const std::string& message, bool allies_onl
 	}
 
 	recorder.speak(cfg);
-	add_chat_message(time(NULL), cfg["id"], side, message,
+	add_chat_message(std::time(NULL), cfg["id"], side, message,
 			private_message ? events::chat_handler::MESSAGE_PRIVATE : events::chat_handler::MESSAGE_PUBLIC);
 
 }
@@ -3601,11 +3601,11 @@ void menu_handler::do_ai_formula(const std::string& str,
 	int side_num, mouse_handler& /*mousehandler*/)
 {
 	try {
-		add_chat_message(time(NULL), _("ai"), 0, ai::manager::evaluate_command(side_num, str));
+		add_chat_message(std::time(NULL), _("ai"), 0, ai::manager::evaluate_command(side_num, str));
 	} catch(end_turn_exception&) {
 		resources::controller->force_end_turn();
 	} catch(...) {
-		//add_chat_message(time(NULL), _("ai"), 0, "ERROR IN FORMULA");
+		//add_chat_message(std::time(NULL), _("ai"), 0, "ERROR IN FORMULA");
 	}
 }
 

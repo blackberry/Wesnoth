@@ -402,7 +402,7 @@ private:
 	static int dice_roll(int num_rolls, int faces) {
 		int res = 0;
 		while(faces > 0 && num_rolls-- > 0) {
-			res += (rand()%faces)+1;
+			res += (std::rand()%faces)+1;
 		}
 		return res;
 	}
@@ -908,14 +908,14 @@ expression_ptr parse_expression(const token* i1, const token* i2, function_symbo
 				return expression_ptr(new identifier_expression(
 				                 std::string(i1->begin,i1->end)));
 			} else if(i1->type == TOKEN_INTEGER) {
-				int n = atoi(std::string(i1->begin,i1->end).c_str());
+				int n = std::atoi(std::string(i1->begin,i1->end).c_str());
 				return expression_ptr(new integer_expression(n));
 			} else if(i1->type == TOKEN_DECIMAL) {
 				iterator dot = i1->begin;
 				while( *dot != '.' )
 					++dot;
 
-				int n = atoi(std::string(i1->begin,dot).c_str());
+				int n = std::atoi(std::string(i1->begin,dot).c_str());
 
 				iterator end = i1->end;
 

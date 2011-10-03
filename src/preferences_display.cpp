@@ -74,7 +74,9 @@ bool detect_video_settings(CVideo& video, std::pair<int,int>& resolution, int& b
 
 	typedef std::pair<int, int> res_t;
 	std::vector<res_t> res_list;
+#ifndef __PLAYBOOK__
 	res_list.push_back(res_t(1024, 768));
+#endif
 	res_list.push_back(res_t(1024, 600));
 	res_list.push_back(res_t(800, 600));
 	res_list.push_back(res_t(800, 480));

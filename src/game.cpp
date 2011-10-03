@@ -2384,6 +2384,10 @@ static int do_gameloop(int argc, char** argv)
 }
 
 #ifndef DISABLE_POOL_ALLOC
+#define DISABLE_POOL_ALLOC 1
+#endif
+
+#ifndef DISABLE_POOL_ALLOC
 extern "C" {
 void init_custom_malloc();
 }
@@ -2458,10 +2462,10 @@ int main(int argc, char** argv)
 	} catch(game::error &) {
 		// A message has already been displayed.
 		return 1;
-	} catch(std::bad_alloc&) {
+	} /*catch(std::bad_alloc&) {
 		std::cerr << "Ran out of memory. Aborted.\n";
 		return ENOMEM;
-	}
+	}*/
 
 	return 0;
 } // end main

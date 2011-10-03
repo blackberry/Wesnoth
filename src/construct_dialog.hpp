@@ -190,11 +190,19 @@ public:
 		int x, y;
 		SDL_Rect interior, message, textbox;
 		unsigned int menu_width;
+#ifdef __PLAYBOOK__
+		std::map<preview_pane *, SDL_Rect > panes;
+#else
 		std::map<preview_pane *const, SDL_Rect > panes;
+#endif
 		int label_x, label_y;
 		int menu_x, menu_y, menu_height;
 		int image_x, image_y, caption_x, caption_y;
+#ifdef __PLAYBOOK__
+		std::map<dialog_button *, std::pair<int,int> > buttons;
+#else
 		std::map<dialog_button *const, std::pair<int,int> > buttons;
+#endif
 		//use get_frame().get_layout() to check frame dimensions
 	};
 	typedef dialog_frame::style style;

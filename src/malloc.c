@@ -1,6 +1,10 @@
 /* $Id: malloc.c 47608 2010-11-21 01:56:29Z shadowmaster $ */
 
 #ifndef DISABLE_POOL_ALLOC
+#define DISABLE_POOL_ALLOC 1
+#endif
+
+#ifndef DISABLE_POOL_ALLOC
 
 #define USE_DL_PREFIX
 
@@ -443,6 +447,10 @@ DEFAULT_MMAP_THRESHOLD       default: 256K
   disable mmap by setting to MAX_SIZE_T.
 
 */
+
+#ifdef __PLAYBOOK__
+#define NO_MALLINFO 1
+#endif
 
 #ifndef WIN32
 #ifdef _WIN32

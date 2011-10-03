@@ -338,7 +338,7 @@ bool tiles_adjacent(const map_location& a, const map_location& b)
 	       (xdiff == 1 && ydiff == 1 && (a.y > b.y ? is_even(a.x) : is_even(b.x)));
 }
 
-size_t distance_between(const map_location& a, const map_location& b)
+std::size_t distance_between(const map_location& a, const map_location& b)
 {
 	const size_t hdistance = abs(a.x - b.x);
 

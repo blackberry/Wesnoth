@@ -127,7 +127,7 @@ static char const vconfigKey = 0;
  */
 static void chat_message(std::string const &caption, std::string const &msg)
 {
-	resources::screen->add_chat_message(time(NULL), caption, 0, msg,
+	resources::screen->add_chat_message(std::time(NULL), caption, 0, msg,
 		events::chat_handler::MESSAGE_PUBLIC, false);
 }
 

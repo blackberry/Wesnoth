@@ -715,14 +715,14 @@ static void check_checksums(const config &cfg)
 		if (!u.valid()) {
 			std::stringstream message;
 			message << "non existent unit to checksum at " << loc.x+1 << "," << loc.y+1 << "!";
-			resources::screen->add_chat_message(time(NULL), "verification", 1, message.str(),
+			resources::screen->add_chat_message(std::time(NULL), "verification", 1, message.str(),
 					events::chat_handler::MESSAGE_PRIVATE, false);
 			continue;
 		}
 		if (get_checksum(*u) != ch["value"]) {
 			std::stringstream message;
 			message << "checksum mismatch at " << loc.x+1 << "," << loc.y+1 << "!";
-			resources::screen->add_chat_message(time(NULL), "verification", 1, message.str(),
+			resources::screen->add_chat_message(std::time(NULL), "verification", 1, message.str(),
 					events::chat_handler::MESSAGE_PRIVATE, false);
 		}
 	}
@@ -826,7 +826,7 @@ bool do_replay_handle(int side_num, const std::string &do_untill)
 			get_replay_source().add_chat_message_location();
 			if (!get_replay_source().is_skipping() || is_whisper) {
 				int side = child["side"];
-				resources::screen->add_chat_message(time(NULL), speaker_name, side, message,
+				resources::screen->add_chat_message(std::time(NULL), speaker_name, side, message,
 						(team_name.empty() ? events::chat_handler::MESSAGE_PUBLIC
 						: events::chat_handler::MESSAGE_PRIVATE),
 						preferences::message_bell());

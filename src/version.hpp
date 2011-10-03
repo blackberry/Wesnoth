@@ -19,6 +19,9 @@
 #include <string>
 #include <vector>
 
+#ifdef __PLAYBOOK__
+using std::size_t;
+#endif
 /**
  * @file
  * Interfaces for manipulating version numbers of engine,

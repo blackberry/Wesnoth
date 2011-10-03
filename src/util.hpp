@@ -142,8 +142,8 @@ bool in_ranges(const Cmp c, const std::vector<std::pair<Cmp, Cmp> >&ranges) {
 	return false;
 }
 
-inline bool chars_equal_insensitive(char a, char b) { return tolower(a) == tolower(b); }
-inline bool chars_less_insensitive(char a, char b) { return tolower(a) < tolower(b); }
+inline bool chars_equal_insensitive(char a, char b) { return std::tolower(a) == std::tolower(b); }
+inline bool chars_less_insensitive(char a, char b) { return std::tolower(a) < std::tolower(b); }
 
 #ifdef __GNUC__
 #define LIKELY(a)    __builtin_expect((a),1) // Tells GCC to optimize code so that if is likely to happen

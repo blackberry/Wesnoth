@@ -46,6 +46,10 @@ public:
 	{
 	}
 
+#ifdef __PLAYBOOK__
+	~tlogic_error() throw() {}
+#endif
+
 private:
 
 	IMPLEMENT_LUA_JAILBREAK_EXCEPTION(tlogic_error)
@@ -66,6 +70,10 @@ public:
 		, tlua_jailbreak_exception()
 	{
 	}
+
+#ifdef __PLAYBOOK__
+	~trange_error() throw() {}
+#endif
 
 private:
 

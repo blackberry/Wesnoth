@@ -8,6 +8,11 @@
 
 #include "../log.hpp"
 
+#ifdef __PLAYBOOK__
+using ::std::atoi;
+using ::std::sprintf;
+#endif
+
 static lg::log_domain log_config("config");
 #define ERR_SWML LOG_STREAM(err, log_config)
 

@@ -19,6 +19,10 @@
 
 #ifndef _WIN32
 
+#ifdef __PLAYBOOK__
+#include <iterator>
+#endif
+
 #include <algorithm>
 #include <iostream>
 #include <fcntl.h>

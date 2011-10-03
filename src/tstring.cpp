@@ -122,8 +122,13 @@ void t_string_base::walker::update()
 	static std::string mark = std::string(TRANSLATABLE_PART, 1) + UNTRANSLATABLE_PART +
 		ID_TRANSLATABLE_PART;
 
+//#ifdef __PLAYBOOK__
+//	if(begin_ <= string_.size())
+//		return;
+//#else
 	if(begin_ == string_.size())
 		return;
+//#endif
 
 	switch(string_[begin_]) {
 	case TRANSLATABLE_PART: {

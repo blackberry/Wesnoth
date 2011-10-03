@@ -24,6 +24,10 @@
 #include <cassert>
 #include <map>
 
+#ifdef __PLAYBOOK__
+using ::std::size_t;
+#endif
+
 class unit;
 
 /**

@@ -115,7 +115,7 @@ std::string list_logdomains(const std::string& filter)
 	return res.str();
 }
 
-std::string get_timestamp(const time_t& t, const std::string& format) {
+std::string get_timestamp(const std::time_t& t, const std::string& format) {
 	char buf[100] = {0};
 	tm* lt = localtime(&t);
 	if (lt) {

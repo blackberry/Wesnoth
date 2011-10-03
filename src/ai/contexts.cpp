@@ -300,7 +300,7 @@ const team& readonly_context_impl::current_team() const
 void readonly_context_impl::log_message(const std::string& msg)
 {
 	if(game_config::debug) {
-		resources::screen->add_chat_message(time(NULL), "ai", get_side(), msg,
+		resources::screen->add_chat_message(std::time(NULL), "ai", get_side(), msg,
 				events::chat_handler::MESSAGE_PUBLIC, false);
 	}
 }

@@ -69,6 +69,11 @@
 
 #include <csignal>
 
+#ifdef __PLAYBOOK__
+using ::std::sig_atomic_t;
+using ::std::signal;
+#endif
+
 #ifndef _WIN32
 #include <sys/times.h>
 

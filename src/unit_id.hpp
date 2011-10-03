@@ -21,6 +21,10 @@
 
 #include <boost/noncopyable.hpp>
 
+#ifdef __PLAYBOOK__
+using ::std::size_t;
+#endif
+
 namespace n_unit {
 
 	class id_manager : private boost::noncopyable {

@@ -468,7 +468,7 @@ void ui::handle_event(const SDL_Event& event)
 	}
 }
 
-void ui::add_chat_message(const time_t& time, const std::string& speaker, int /*side*/, const std::string& message, events::chat_handler::MESSAGE_TYPE /*type*/)
+void ui::add_chat_message(const std::time_t& time, const std::string& speaker, int /*side*/, const std::string& message, events::chat_handler::MESSAGE_TYPE /*type*/)
 {
 	chat_.add_message(time, speaker, message);
 	chat_.update_textbox(chat_textbox_);
@@ -481,7 +481,7 @@ void ui::send_chat_message(const std::string& message, bool /*allies_only*/)
 	msg["sender"] = preferences::login();
 	data.add_child("message", msg);
 
-	add_chat_message(time(NULL), preferences::login(),0, message);	//local echo
+	add_chat_message(std::time(NULL), preferences::login(),0, message);	//local echo
 	network::send_data(data, 0);
 }
 

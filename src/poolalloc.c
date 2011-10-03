@@ -1,5 +1,9 @@
 /* $Id: poolalloc.c 42272 2010-04-26 23:14:55Z espreon $ */
 #ifndef DISABLE_POOL_ALLOC
+#define DISABLE_POOL_ALLOC 1
+#endif
+
+#ifndef DISABLE_POOL_ALLOC
 /*
    Copyright (C) 2008 by David White <dave@whitevine.net>
    Part of the Battle for Wesnoth Project http://www.wesnoth.org/
@@ -62,7 +66,11 @@ void dlfree(void* ptr);
 #define GET_POOL_INDEX(n) ((n)/CHUNK_SIZE_STEP)
 #define ROUNDUP_SIZE(n) (((n)%CHUNK_SIZE_STEP) ? ((n) + CHUNK_SIZE_STEP - ((n)%CHUNK_SIZE_STEP)) : (n))
 
+#ifdef __PLAYBOOK__
+#define CUSTOM_MEMORY_SIZE (1024*1024*256)
+#else
 #define CUSTOM_MEMORY_SIZE (1024*1024*40)
+#endif
 uint8_t* begin_superblock_range = NULL;
 uint8_t* begin_superblock = NULL;
 uint8_t* end_superblock = NULL;

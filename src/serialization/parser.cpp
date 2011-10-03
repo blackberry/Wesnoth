@@ -414,6 +414,10 @@ void write_key_val_visitor::operator()(t_string const &value) const
 
 	for (t_string::walker w(value); !w.eos(); w.next())
 	{
+#ifdef __PLAYBOOK__
+		if (w.end() < w.begin())
+			break;
+#endif
 		std::string part(w.begin(), w.end());
 
 		if (!first)

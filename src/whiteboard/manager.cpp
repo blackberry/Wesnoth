@@ -71,7 +71,7 @@ manager::~manager()
 
 static void print_to_chat(const std::string& title, const std::string& message)
 {
-	resources::screen->add_chat_message(time(NULL), title, 0, message,
+	resources::screen->add_chat_message(std::time(NULL), title, 0, message,
 			events::chat_handler::MESSAGE_PRIVATE, false);
 }
 

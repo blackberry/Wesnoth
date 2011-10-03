@@ -90,7 +90,11 @@ SDL_Color create_color(const unsigned char red
 SDLKey sdl_keysym_from_name(std::string const &keyname)
 {
 	static bool initialized = false;
+#ifdef __PLAYBOOK__
+	typedef std::map<std::string, SDLKey> keysym_map_t;
+#else
 	typedef std::map<std::string const, SDLKey> keysym_map_t;
+#endif
 	static keysym_map_t keysym_map;
 
 	if (!initialized) {

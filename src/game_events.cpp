@@ -244,7 +244,7 @@ static void show_wml_errors()
 			msg << " (" << itor->second << ")";
 		}
 
-		resources::screen->add_chat_message(time(NULL), caption, 0, msg.str(),
+		resources::screen->add_chat_message(std::time(NULL), caption, 0, msg.str(),
 				events::chat_handler::MESSAGE_PUBLIC, false);
 		std::cerr << caption << ": " << msg.str() << '\n';
 	}
@@ -268,7 +268,7 @@ static void show_wml_messages()
 			msg << " (" << itor->second << ")";
 		}
 
-		resources::screen->add_chat_message(time(NULL), caption, 0, msg.str(),
+		resources::screen->add_chat_message(std::time(NULL), caption, 0, msg.str(),
 				events::chat_handler::MESSAGE_PUBLIC, false);
 	}
 }

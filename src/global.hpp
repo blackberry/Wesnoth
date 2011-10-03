@@ -29,4 +29,12 @@
 
 #endif
 
+#ifdef __PLAYBOOK__
+#include <sys/types.h>
+#include <time.h>
+using std::size_t;
+using std::time;
+using std::ctime;
+#endif
+
 #endif

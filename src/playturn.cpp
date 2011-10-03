@@ -88,14 +88,14 @@ turn_info::PROCESS_DATA_RESULT turn_info::process_network_data(const config& cfg
 
 	if (const config &msg = cfg.child("message"))
 	{
-		resources::screen->add_chat_message(time(NULL), msg["sender"], msg["side"],
+		resources::screen->add_chat_message(std::time(NULL), msg["sender"], msg["side"],
 				msg["message"], events::chat_handler::MESSAGE_PUBLIC,
 				preferences::message_bell());
 	}
 
 	if (const config &msg = cfg.child("whisper") /*&& is_observer()*/)
 	{
-		resources::screen->add_chat_message(time(NULL), "whisper: " + msg["sender"].str(), 0,
+		resources::screen->add_chat_message(std::time(NULL), "whisper: " + msg["sender"].str(), 0,
 				msg["message"], events::chat_handler::MESSAGE_PRIVATE,
 				preferences::message_bell());
 	}

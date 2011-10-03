@@ -18,7 +18,12 @@
  * Template instantiations for wesnoth-game.
  */
 
+#ifdef __PLAYBOOK__
+#include "animated.inc"
+#else
 #include "animated.i"
+#endif
+
 // Force compilation of the following template instantiations
 
 #include "unit_frame.hpp"

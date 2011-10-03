@@ -35,6 +35,10 @@
 
 #include <csignal>
 
+#ifdef __PLAYBOOK__
+using ::std::signal;
+#endif
+
 #include <boost/iostreams/filter/gzip.hpp>
 
 // the fork execute is unix specific only tested on Linux quite sure it won't

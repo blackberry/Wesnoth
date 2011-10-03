@@ -11,6 +11,10 @@
 
 #include "exceptions.hpp"
 
+#ifdef __PLAYBOOK__
+using ::std::ptrdiff_t;
+#endif
+
 namespace simple_wml {
 
 struct error : public game::error {
