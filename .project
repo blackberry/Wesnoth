@@ -3,11 +3,19 @@
 	<name>wesnoth</name>
 	<comment></comment>
 	<projects>
+		<project>cairo</project>
+		<project>pango</project>
+		<project>pango-module-basic</project>
+		<project>SDL_image</project>
+		<project>SDL_mixer</project>
+		<project>SDL_net</project>
+		<project>SDL_ttf</project>
+		<project>SDL12</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
-			<triggers>clean,full,incremental,</triggers>
+			<triggers>full,incremental,</triggers>
 			<arguments>
 				<dictionary>
 					<key>?name?</key>
@@ -27,7 +35,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.buildLocation</key>
-					<value>${workspace_loc:/Wesnoth/Device-Release}</value>
+					<value>${workspace_loc:/Wesnoth/Device-Debug}</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.contents</key>
@@ -39,7 +47,7 @@
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.enableCleanBuild</key>
-					<value>true</value>
+					<value>false</value>
 				</dictionary>
 				<dictionary>
 					<key>org.eclipse.cdt.make.core.enableFullBuild</key>

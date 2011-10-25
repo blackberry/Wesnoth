@@ -51,30 +51,42 @@
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.games</category>
     <asset path="icon.png">icon.png</asset>
+    <asset path="${QNX_TARGET}/../target-override/${CPUVARDIR}/usr/lib/libbps.so" type="Qnx/Elf">lib/libbps.so.1</asset>
     <configuration id="com.qnx.qcc.configuration.exe.debug.261734325" name="Simulator">
+       <platformArchitecture>x86</platformArchitecture>
        <asset path="Simulator/wesnoth" entry="true" type="Qnx/Elf">wesnoth</asset>
+       <asset path="${workspace_loc:/SDL_mixer/Simulator/libSDL_mixer.so}" type="Qnx/Elf">lib/libSDL_mixer.so</asset>
+       <asset path="${workspace_loc:/SDL_image/Simulator/libSDL_image.so}" type="Qnx/Elf">lib/libSDL_image.so</asset>
+       <asset path="${workspace_loc:/SDL_net/Simulator/libSDL_net.so}" type="Qnx/Elf">lib/libSDL_net.so</asset>
+       <asset path="${workspace_loc:/pango/Simulator/libpango.so}" type="Qnx/Elf">lib/libpango.so</asset>      
+       <asset path="${workspace_loc:/SDL12/Simulator/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+       <asset path="${workspace_loc:/glib/Simulator/libglib.so}" type="Qnx/Elf">lib/libglib.so</asset>
+       <asset path="${workspace_loc:/pango-module-basic/Simulator/libpango-module-basic.so}" type="Qnx/Elf">lib/pango/1.6.0/modules/libpango-module-basic.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Simulator/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
     </configuration>
     <configuration id="com.qnx.qcc.configuration.exe.debug.2075273161" name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
        <asset path="Device-Debug/wesnoth" entry="true" type="Qnx/Elf">wesnoth</asset>
        <asset path="${workspace_loc:/SDL_mixer/Device-Debug/libSDL_mixer.so}" type="Qnx/Elf">lib/libSDL_mixer.so</asset>
        <asset path="${workspace_loc:/SDL_image/Device-Debug/libSDL_image.so}" type="Qnx/Elf">lib/libSDL_image.so</asset>
        <asset path="${workspace_loc:/SDL_net/Device-Debug/libSDL_net.so}" type="Qnx/Elf">lib/libSDL_net.so</asset>
        <asset path="${workspace_loc:/pango/Device-Debug/libpango.so}" type="Qnx/Elf">lib/libpango.so</asset>
-       <asset path="${workspace_loc:/emulate/Device-Debug/libemulate.so}" type="Qnx/Elf">lib/libemulate.so</asset>
        <asset path="${workspace_loc:/SDL12/Device-Debug/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
        <asset path="${workspace_loc:/glib/Device-Debug/libglib.so}" type="Qnx/Elf">lib/libglib.so</asset>
        <asset path="${workspace_loc:/pango-module-basic/Device-Debug/libpango-module-basic.so}" type="Qnx/Elf">lib/pango/1.6.0/modules/libpango-module-basic.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Device-Debug/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
     </configuration>
     <configuration id="com.qnx.qcc.configuration.exe.release.1076827978" name="Device-Release">
+       <platformArchitecture>armle-v7</platformArchitecture>
        <asset path="Device-Release/wesnoth" entry="true" type="Qnx/Elf">wesnoth</asset>
        <asset path="${workspace_loc:/SDL_mixer/Device-Release/libSDL_mixer.so}" type="Qnx/Elf">lib/libSDL_mixer.so</asset>
        <asset path="${workspace_loc:/SDL_image/Device-Release/libSDL_image.so}" type="Qnx/Elf">lib/libSDL_image.so</asset>
        <asset path="${workspace_loc:/SDL_net/Device-Release/libSDL_net.so}" type="Qnx/Elf">lib/libSDL_net.so</asset>
-       <asset path="${workspace_loc:/pango/Device-Release/libpango.so}" type="Qnx/Elf">lib/libpango.so</asset>
-       <asset path="${workspace_loc:/emulate/Device-Release/libemulate.so}" type="Qnx/Elf">lib/libemulate.so</asset>
+       <asset path="${workspace_loc:/pango/Device-Release/libpango.so}" type="Qnx/Elf">lib/libpango.so</asset>      
        <asset path="${workspace_loc:/SDL12/Device-Release/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
        <asset path="${workspace_loc:/glib/Device-Release/libglib.so}" type="Qnx/Elf">lib/libglib.so</asset>
        <asset path="${workspace_loc:/pango-module-basic/Device-Release/libpango-module-basic.so}" type="Qnx/Elf">lib/pango/1.6.0/modules/libpango-module-basic.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Device-Release/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
     </configuration>
     
     <!--  The icon for the application, which should be 86x86. -->

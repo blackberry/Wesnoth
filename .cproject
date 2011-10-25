@@ -30,7 +30,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogg/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\pbndk\boost_1_46_1&quot;"/>
+									<listOptionValue builtIn="false" value="/home/asimonov/tmp"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/src}&quot;"/>
@@ -51,20 +51,19 @@
 								<option id="com.qnx.qcc.option.linker.debug.2045817063" name="Debug (-g)" superClass="com.qnx.qcc.option.linker.debug" value="true" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.linker.langcpp.1996072132" name="C++ (-lang-c++)" superClass="com.qnx.qcc.option.linker.langcpp" value="true" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.linker.libraryPaths.833952048" name="Library Paths (-L)" superClass="com.qnx.qcc.option.linker.libraryPaths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/png/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boost_iostreams/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boost_regex/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lua/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pango/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cairo/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/emulate/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pixman/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/glib/Device-Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/../target-override/${CPUVARDIR}/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/../target-override/${CPUVARDIR}/usr/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/asimonov/tmp/Device-Debug"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pango/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cairo/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TouchControlOverlay/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pixman/Simulator}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/glib/Simulator}&quot;"/>
 								</option>
 								<option id="com.qnx.qcc.option.linker.libraries.23930238" name="Libraries (-l)" superClass="com.qnx.qcc.option.linker.libraries" valueType="libs">
 									<listOptionValue builtIn="false" value="SDL_mixer"/>
@@ -74,7 +73,7 @@
 									<listOptionValue builtIn="false" value="SDL_ttf"/>
 									<listOptionValue builtIn="false" value="SDL_image"/>
 									<listOptionValue builtIn="false" value="SDL12"/>
-									<listOptionValue builtIn="false" value="emulate"/>
+									<listOptionValue builtIn="false" value="TouchControlOverlay"/>
 									<listOptionValue builtIn="false" value="pango"/>
 									<listOptionValue builtIn="false" value="cairo"/>
 									<listOptionValue builtIn="false" value="pixman"/>
@@ -84,7 +83,6 @@
 									<listOptionValue builtIn="false" value="freetype"/>
 									<listOptionValue builtIn="false" value="bps"/>
 									<listOptionValue builtIn="false" value="pps"/>
-									<listOptionValue builtIn="false" value="lua"/>
 									<listOptionValue builtIn="false" value="png"/>
 									<listOptionValue builtIn="false" value="xml2"/>
 									<listOptionValue builtIn="false" value="socket"/>
@@ -127,7 +125,7 @@
 						<toolChain errorParsers="" id="com.qnx.qcc.toolChain.exe.debug.564640106" name="QNX QCC" superClass="com.qnx.qcc.toolChain">
 							<option id="com.qnx.qcc.option.cpu.1291746422" name="Target CPU:" superClass="com.qnx.qcc.option.cpu" value="com.qnx.qcc.option.gen.cpu.armle-v7" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="com.qnx.tools.ide.qde.core.QDEBynaryParser" id="com.qnx.qcc.targetPlatform.601597487" osList="all" superClass="com.qnx.qcc.targetPlatform"/>
-							<builder buildPath="${workspace_loc:/Wesnoth/Device-Debug}" errorParsers="" id="com.qnx.nto.1228282818" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" parallelBuildOn="false" parallelizationNumber="3" superClass="com.qnx.nto"/>
+							<builder buildPath="${workspace_loc:/Wesnoth/Device-Debug}" enableCleanBuild="false" errorParsers="" id="com.qnx.nto.1228282818" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" parallelBuildOn="false" parallelizationNumber="3" superClass="com.qnx.nto"/>
 							<tool command="qcc" commandLinePattern="${COMMAND}  ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS} ${FLAGS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="com.qnx.qcc.tool.compiler.1825440237" name="QCC Compiler" superClass="com.qnx.qcc.tool.compiler">
 								<option id="com.qnx.qcc.option.compile.debug.428899481" name="Debug (-g)" superClass="com.qnx.qcc.option.compile.debug" value="true" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.compiler.defines.67658076" name="Defines (-D)" superClass="com.qnx.qcc.option.compiler.defines" valueType="definedSymbols">
@@ -138,7 +136,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogg/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\pbndk\boost_1_46_1&quot;"/>
+									<listOptionValue builtIn="false" value="/home/asimonov/tmp"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/src}&quot;"/>
@@ -159,18 +157,17 @@
 								<option id="com.qnx.qcc.option.linker.debug.358986680" name="Debug (-g)" superClass="com.qnx.qcc.option.linker.debug" value="true" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.linker.langcpp.255023443" name="C++ (-lang-c++)" superClass="com.qnx.qcc.option.linker.langcpp" value="true" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.linker.libraryPaths.176845142" name="Library Paths (-L)" superClass="com.qnx.qcc.option.linker.libraryPaths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/../target-override/${CPUVARDIR}/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/../target-override/${CPUVARDIR}/usr/lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/png/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boost_iostreams/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boost_regex/Device-Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/asimonov/tmp/Device-Debug"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lua/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pango/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cairo/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/emulate/Device-Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TouchControlOverlay/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pixman/Device-Debug}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/glib/Device-Debug}&quot;"/>
 								</option>
@@ -182,7 +179,7 @@
 									<listOptionValue builtIn="false" value="SDL_ttf"/>
 									<listOptionValue builtIn="false" value="SDL_image"/>
 									<listOptionValue builtIn="false" value="SDL12"/>
-									<listOptionValue builtIn="false" value="emulate"/>
+									<listOptionValue builtIn="false" value="TouchControlOverlay"/>
 									<listOptionValue builtIn="false" value="pango"/>
 									<listOptionValue builtIn="false" value="cairo"/>
 									<listOptionValue builtIn="false" value="pixman"/>
@@ -192,7 +189,6 @@
 									<listOptionValue builtIn="false" value="freetype"/>
 									<listOptionValue builtIn="false" value="bps"/>
 									<listOptionValue builtIn="false" value="pps"/>
-									<listOptionValue builtIn="false" value="lua"/>
 									<listOptionValue builtIn="false" value="png"/>
 									<listOptionValue builtIn="false" value="xml2"/>
 									<listOptionValue builtIn="false" value="socket"/>
@@ -246,7 +242,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogg/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;C:\pbndk\boost_1_46_1&quot;"/>
+									<listOptionValue builtIn="false" value="/home/asimonov/tmp"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/src}&quot;"/>
@@ -261,25 +257,24 @@
 								<inputType id="com.qnx.qcc.inputType.compiler.1774393904" superClass="com.qnx.qcc.inputType.compiler"/>
 							</tool>
 							<tool errorParsers="" id="com.qnx.qcc.tool.assembler.987224169" name="QCC Assembler" superClass="com.qnx.qcc.tool.assembler">
-								<option id="com.qnx.qcc.option.assembler.debug.1988890799" name="Debug (-g)" superClass="com.qnx.qcc.option.assembler.debug" value="true" valueType="boolean"/>
+								<option id="com.qnx.qcc.option.assembler.debug.1988890799" name="Debug (-g)" superClass="com.qnx.qcc.option.assembler.debug" value="false" valueType="boolean"/>
 								<inputType id="com.qnx.qcc.inputType.assembler.331148657" superClass="com.qnx.qcc.inputType.assembler"/>
 							</tool>
 							<tool errorParsers="com.qnx.tools.ide.qde.core.QDELinkerErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="com.qnx.qcc.tool.linker.515883843" name="QCC Linker" superClass="com.qnx.qcc.tool.linker">
 								<option id="com.qnx.qcc.option.linker.langcpp.2132527320" name="C++ (-lang-c++)" superClass="com.qnx.qcc.option.linker.langcpp" value="true" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.linker.debug.1116181758" name="Debug (-g)" superClass="com.qnx.qcc.option.linker.debug" value="false" valueType="boolean"/>
 								<option id="com.qnx.qcc.option.linker.libraryPaths.556438778" name="Library Paths (-L)" superClass="com.qnx.qcc.option.linker.libraryPaths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/Device-Debug}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/png/Device-Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boost_iostreams/Device-Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/boost_regex/Device-Release}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/../target-override/${CPUVARDIR}/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${QNX_TARGET}/../target-override/${CPUVARDIR}/usr/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/Device-Release}&quot;"/>
+									<listOptionValue builtIn="false" value="/home/asimonov/tmp/Device-Release"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/Device-Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/lua/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pango/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cairo/Device-Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/emulate/Device-Release}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/TouchControlOverlay/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/pixman/Device-Release}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/glib/Device-Release}&quot;"/>
 								</option>
@@ -291,7 +286,7 @@
 									<listOptionValue builtIn="false" value="SDL_ttf"/>
 									<listOptionValue builtIn="false" value="SDL_image"/>
 									<listOptionValue builtIn="false" value="SDL12"/>
-									<listOptionValue builtIn="false" value="emulate"/>
+									<listOptionValue builtIn="false" value="TouchControlOverlay"/>
 									<listOptionValue builtIn="false" value="pango"/>
 									<listOptionValue builtIn="false" value="cairo"/>
 									<listOptionValue builtIn="false" value="pixman"/>
@@ -301,7 +296,6 @@
 									<listOptionValue builtIn="false" value="freetype"/>
 									<listOptionValue builtIn="false" value="bps"/>
 									<listOptionValue builtIn="false" value="pps"/>
-									<listOptionValue builtIn="false" value="lua"/>
 									<listOptionValue builtIn="false" value="png"/>
 									<listOptionValue builtIn="false" value="xml2"/>
 									<listOptionValue builtIn="false" value="socket"/>
