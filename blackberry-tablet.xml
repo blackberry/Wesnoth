@@ -52,6 +52,7 @@
     <category>core.games</category>
     <asset path="icon.png">icon.png</asset>
     <asset path="${QNX_TARGET}/../target-override/${CPUVARDIR}/usr/lib/libbps.so" type="Qnx/Elf">lib/libbps.so.1</asset>
+    <asset path="sdl-controls.xml">sdl-controls.xml</asset>
     <configuration id="com.qnx.qcc.configuration.exe.debug.261734325" name="Simulator">
        <platformArchitecture>x86</platformArchitecture>
        <asset path="Simulator/wesnoth" entry="true" type="Qnx/Elf">wesnoth</asset>
