@@ -1,0 +1,1 @@
+app/native/lib/pango/1.6.0/modules/libpango-module-basic.so BasicScriptEngineFc PangoEngineShape PangoRenderFc latin:* cyrillic:* greek:* armenian:* georgian:* runic:* ogham:* bopomofo:* common:*
