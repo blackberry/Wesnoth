@@ -1,0 +1,48 @@
+Build Instructions:
+1. Gather dependency libraries
+   There are a number of dependency libraries that are required. Currently, each is stored in a different repository. To build Wesnoth, you will require:
+     - glib
+     - pixman
+     - cairo
+     - pango (may contain multiple projects)
+     - libogg
+     - libvorbis
+     - TouchControlOverlay
+     - SDL (1.2)
+     - SDL_image
+     - SDL_mixer
+     - SDL_net
+     - SDL_ttf
+
+   You will also need the headers from Boost, and the Boost iostreams and Boost regex libraries.
+
+   Once you have checked out all of the dependencies, along with the wesnoth source itself, open the NDK and import all of them as projects into your workspace. Note that the pango repository may contain multiple projects.
+
+2. Build projects
+   First, you will need to set up the include path and library path in the wesnoth project so that it can find the location where you have placed Boost.
+
+   The project references should be set up so that you can only build the wesnoth project and the rest of the dependencies will be found and built.  However, it's possible that some of the projects may not be configured to build for the desired build configuration. Make sure all of them are using the same configuration, whether Device-Debug, Device-Release or Simulator.
+
+   Select the wesnoth project and choose "Build Project".
+
+3. Setup run configuration
+   Before installing the application on the PlayBook or simulator, you should set up a run configuration in the NDK so that runtime arguments can be provided.
+   Create a new run configuration for wesnoth, selecting the build configuration that was used, and use the following as arguments:
+
+      -r 1024x600 data
+
+   The resolution specified will prevent wesnoth from stretching the default 1024x768 resolution into the screen size. The last argument specifies where the wesnoth assets will be placed.
+
+4. Run
+   Now you can run the configuration, but the game will not start properly. The problem is that the wesnoth assets are not present on the device. You can add them as assets in by editing the blackberry-tablet.xml file; however, this will increase the installation time of your application substantially. For now, we will place them manually onto the device. Note that if you are actually packaging your application for distribution, you should *not* distribute assets in this manner - you must package them as assets in the XML file.
+   
+   First, run the game. This will fail, but will create the sandbox on the device. After the sandbox has been created, open the System Information perspective in the NDK, and open the Target File Navigator. Locate the sandbox for wesnoth. There should be a data folder present.
+
+   The assets are packaged into the repository already, but they must be placed in the correct folders in order to be found at runtime. Copy four folders from the repository into the data folder on the device.
+     - data
+     - fonts
+     - images
+     - sounds
+   Finally, we have to make sure that pango is able to find its rendering module, otherwise our text will not appear. Create a new folder on the device, in the sandbox, but not inside the data subfolder, and call it 'pango'. Copy the pango.modules file from the repository into this new folder.
+
+   Now you should be able to launch wesnoth on the device. Have fun!
