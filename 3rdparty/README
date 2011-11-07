@@ -1,0 +1,13 @@
+Building Wesnoth dependencies
+There are a number of dependency libraries required. 
+- SDL 1.2 - https://github.com/blackberry/SDL
+- SDL_image - Follow the instructions in the SDL_image subdirectory.
+- SDL_mixer - Follow the instructions in the SDL_mixer subdirectory.
+- SDL_net - Follow the instructions in the SDL_net subdirectory.
+- SDL_ttf - Follow the instructions in the SDL_ttf subdirectory.
+- TouchControlOverlay - https://github.com/blackberry/TouchControlOverlay
+- glib - Follow the instructions in the glib subdirectory.
+- pango - Follow the instructions in the pango subdirectory.
+- pixman - Follow the instructions in the pixman subdirectory.
+- cairo - Follow the instructions in the cairo subdirectory.
+

@@ -30,7 +30,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogg/include}&quot;"/>
-									<listOptionValue builtIn="false" value="/home/asimonov/tmp"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/3rdparty/boost}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/src}&quot;"/>
@@ -136,7 +136,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogg/include}&quot;"/>
-									<listOptionValue builtIn="false" value="/home/asimonov/tmp"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/3rdparty/boost}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/src}&quot;"/>
@@ -242,7 +242,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL12/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_ttf/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ogg/include}&quot;"/>
-									<listOptionValue builtIn="false" value="/home/asimonov/tmp"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/3rdparty/boost}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_mixer/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_image/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SDL_net/src}&quot;"/>

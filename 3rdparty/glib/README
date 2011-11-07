@@ -1,0 +1,26 @@
+Build Instructions
+1. Download Glib source from http://ftp.acc.umu.se/pub/gnome/sources/glib/.
+   These instructions were actually tested against 2.28.8.
+2. The directory layout used for the project is somewhat different from
+   the layout in the archive. (FIXME for later!) 
+   However, here's what you need to do.
+   a. First, extract the glib-2.28.8 folder contents into this directory. You
+      should have a number of subdirectories (e.g. glib, gmodule, gobject).
+   b. Move four of these subdirectories (glib, gmodule, gobject and gthread)
+      into the src folder.
+   c. Copy three header files (glib-object.h, glib.h and gmodule.h) into the
+      inc folder. These are the public includes for the library.
+      - glib-object.h and glib.h are found in the src/glib directory.
+      - gmodule.h is found in the src/gmodule directory.
+   d. Edit two files.
+      - src/glib/gmain.c: PlayBook does not have the SA_RESTART flag. It will
+        suffice for now to remove it. It occurs only once. You can #ifdef it
+	if you wish. __PLAYBOOK__ is an acceptable macro.
+      - src/glib/libcharset/localcharset.c: There is no charset.alias file
+        so we need to act as if we were VMS. In the 
+	_g_locale_get_charset_aliases function, there are two places where 
+	we check if VMS is defined. Add checks for __PLAYBOOK__ in the same
+	places. This will define the charset aliases safely.
+
+3. Import the NDK project from this directory into your workspace.
+4. Build the project.

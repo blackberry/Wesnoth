@@ -1,0 +1,24 @@
+Instructions for building the full Boost libraries should be found at 
+https://github.com/blackberry/Boost. However, they may not be available yet.
+Here are some temporary quick instructions for building the parts of Boost 
+that Wesnoth requires.
+1. Download Boost. (http://www.boost.org/)
+2. You will need to build two libraries and also have the full headers
+   available to Wesnoth.
+3. Extract the downloaded archive file to this directory.
+4. The include path for Wesnoth should already include this directory, correct
+   it if needed.
+5. Create two new NDK projects. Choose C++ and have them build static libraries.
+   One should be called libboost_iostreams and the other libboost_regex.
+   i. a. For libboost_iostreams, copy the source files from libs/iostreams/src
+         into the project src directory.
+      b. Set up the include path to point to the 3rdparty/boost directory in 
+         the wesnoth project.
+      c. Build the library.
+   ii. a. For libboost_regex, copy the source files from libs/regex/src
+         into the project src directory.
+      b. Set up the include path to point to the 3rdparty/boost directory in 
+         the wesnoth project.
+      c. Build the library.
+6. Change the wesnoth project to link against the two new library projects.
+   This will probably require you to change the library paths.

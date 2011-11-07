@@ -1,0 +1,5 @@
+Build Instructions
+1. Download SDL_ttf source from http://www.libsdl.org/projects/SDL_ttf/.
+2. Extract the source into this directory. This directory should now contain a subdirectory named SDL_ttf-2.0.10. Rename this directory to be called src.
+3. Import the NDK project from this directory into your workspace.
+4. Build the project.

@@ -1,0 +1,5 @@
+Build Instructions
+1. Download pixman source code from http://cgit.freedesktop.org/pixman/snapshot/pixman-0.21.8.tar.gz.
+2. Extract the source into this directory. This directory should now contain a subdirectory named pixman.
+3. Import the NDK project from this directory into your workspace.
+4. Build the project.

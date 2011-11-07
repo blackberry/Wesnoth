@@ -1,0 +1,78 @@
+Build Instructions
+1. Download Pango source from http://ftp.gnome.org/pub/GNOME/sources/pango/.
+   These instructions were actually tested against 1.28.4.
+2. The directory layout used for the project is somewhat different from
+   the layout in the archive. (FIXME for later!) 
+   However, here's what you need to do.
+   a. First, extract the pango-1.28.4 folder contents into this directory. You
+      should have a number of subdirectories (e.g. pango, modules).
+   b. Copy the contents of the pango directory into the src directory. You can
+      move them into it if you prefer.
+   c. Create a subdirectory in modules called src, and move all the files and 
+      folders from the modules base folder into it, except for .project and 
+      .cproject.
+   d. Make a copy of the public header files into a new directory called inc.
+	pango-attributes.h
+	pango-bidi-type.h
+	pango-break.h
+	pango-context.h
+	pango-coverage.h
+	pango-engine.h
+	pango-enum-types.h
+	pango-features.h
+	pango-font.h
+	pango-fontmap.h
+	pango-fontset.h
+	pango-glyph-item.h
+	pango-glyph.h
+	pango-gravity.h
+	pango-item.h
+	pango-language.h
+	pango-layout.h
+	pango-matrix.h
+	pango-modules.h
+	pango-ot.h
+	pango-renderer.h
+	pango-script.h
+	pango-tabs.h
+	pango-types.h
+	pango-utils.h
+	pango.h
+	pangocairo.h
+	pangofc-decoder.h
+	pangofc-font.h
+	pangofc-fontmap.h
+	pangoft2.h
+	pangowin32.h
+	pangox.h
+	pangoxft-render.h
+	pangoxft.h
+   e. Minor source changes to configure it on PlayBook are required. This is
+      rather a mess, I'm afraid, so a definite FIXME for later.
+
+      In the file src/pango-utils.c, edit the two functions 
+      pango_get_sysconf_directory so it returns "./pango" for PlayBook (wrap
+      in #ifdef __PLAYBOOK__), and pango_get_lib_subdirectory so it returns
+      "app/native/lib/pango".
+
+      In the file src/opentype/hb-private.h, make sure we include glib.h. 
+      I changed #if HAVE_GLIB to #if HAVE_GLIB || defined(__PLAYBOOK__) but
+      perhaps defining HAVE_GLIB would do.
+
+      Some of the files end in *.i. Unfortunately, the NDK doesn't seem to
+      provide a way to avoid treating these as source files, and will attempt
+      to build them and fail. My current workaround is a) rename them as *.inc,
+      and b) change the places where they are included to pick up their new
+      names. This is *not* how I really want to do it, but I didn't find 
+      another way yet!
+      The files are: 
+        In modules/src/basic: 
+        - tables-big.i: included in basic-x.c.
+        - tables-small.i: not included at all.
+        In src/mini-fribidi:
+        - fribidi_tab_char_type_2.i: included in fribidi_char_type.c, twice.
+        - fribidi_types.i: included in fribidi_types.c and fribidi_types.h
+
+3. Import the NDK projects from this directory and from the modules directory
+   into your workspace.
+4. Build the two projects.

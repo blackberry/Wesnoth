@@ -1,0 +1,9 @@
+Build Instructions
+1. Download Cairo source from http://cairographics.org/download. This was
+   tested against 1.10.2.
+2. When extracting the source into this directory, please *be careful* to copy
+   the src folder into this directory instead of creating a cairo-1.10.2 
+   directory here. Note that there is already a src folder present which 
+   contains generated files for the build.
+3. Import the NDK project from this directory into your workspace.
+4. Build the project.
