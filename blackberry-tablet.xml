@@ -112,4 +112,6 @@
     <!--  <permission>set_audio_volume</permission> -->
     <!--  <permission>read_device_identifying_information</permission> -->
 
+    <!-- Ensure that shared libraries in the package are found at run-time. -->
+    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
 </qnx>
